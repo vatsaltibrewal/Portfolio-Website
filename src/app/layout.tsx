@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import PersistentNavBar from "@/components/layout/PersistentNavBar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 
@@ -17,8 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vatsal Tibrewal - Full Stack Developer",
-  description: "Portfolio website of Vatsal Tibrewal, a Full Stack Developer specialized in web development",
+  title: "Vatsal Tibrewal",
+  description: "Portfolio of Vatsal Tibrewal, a Blockchain and Full Stack Developer specialized in Solidity, Move, and web development",
+  icons: {
+    icon: { url: '/logo.jpg', sizes: '32x32' }, // Reference to your new favicon
+  },
 };
 
 export default function RootLayout({
@@ -30,10 +33,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         <ThemeProvider>
-          <Navbar />
-          <main className="flex-grow pt-16">
+          <main className="flex-grow pt-6 pb-12">
             {children}
           </main>
+          <PersistentNavBar />
           <Footer />
         </ThemeProvider>
       </body>

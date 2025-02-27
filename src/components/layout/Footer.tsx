@@ -9,12 +9,12 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1 */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Vatsal Tibrewal</h3>
-            <p className="text-sm text-foreground/70 max-w-xs">
-              A passionate full stack developer focused on creating intuitive, performant web applications.
-            </p>
-          </div>
+            <div className="space-y-4">
+                <h3 className="text-lg font-semibold">Vatsal Tibrewal</h3>
+                <p className="text-sm text-foreground/70 max-w-xs">
+                    A passionate blockchain and full stack developer specialized in Solidity, Move, and web application development.
+                </p>
+            </div>
           
           {/* Column 2 */}
           <div className="space-y-4">
@@ -23,7 +23,6 @@ export default function Footer() {
               <Link href="/" className="text-sm hover:text-blue-500 transition-colors">Home</Link>
               <Link href="/about" className="text-sm hover:text-blue-500 transition-colors">About</Link>
               <Link href="/projects" className="text-sm hover:text-blue-500 transition-colors">Projects</Link>
-              <Link href="/contact" className="text-sm hover:text-blue-500 transition-colors">Contact</Link>
             </div>
           </div>
           
@@ -31,36 +30,36 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Connect</h3>
             <div className="flex flex-col space-y-2">
-              <a 
-                href="https://github.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-sm hover:text-blue-500 transition-colors"
-              >
-                GitHub
-              </a>
-              <a 
-                href="https://linkedin.com/in/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-sm hover:text-blue-500 transition-colors"
-              >
-                LinkedIn
-              </a>
-              <a 
-                href="https://twitter.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-sm hover:text-blue-500 transition-colors"
-              >
-                Twitter
-              </a>
-              <a 
-                href="mailto:your-email@example.com" 
-                className="text-sm hover:text-blue-500 transition-colors"
-              >
-                Email
-              </a>
+                <a 
+                    href="https://github.com/vatsaltibrewal" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm hover:text-blue-500 transition-colors"
+                    >
+                    GitHub
+                </a>
+                <a 
+                    href="https://linkedin.com/in/vatsaltibrewal" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm hover:text-blue-500 transition-colors"
+                    >
+                    LinkedIn
+                </a>
+                <a 
+                    href="https://x.com/vatsaltibrewal" // Update with your actual handle
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm hover:text-blue-500 transition-colors"
+                    >
+                    X (Twitter)
+                </a>
+                <a 
+                    href="mailto:tibrewalvatsal@gmail.com" 
+                    className="text-sm hover:text-blue-500 transition-colors"
+                    >
+                    Email
+                </a>
             </div>
           </div>
         </div>

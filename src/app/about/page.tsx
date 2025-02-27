@@ -1,78 +1,165 @@
 // src/app/about/page.tsx
-import Timeline from "@/components/about/Timeline";
-
-// Sample timeline data
-const experienceData = [
-  {
-    year: "2022 - Present",
-    title: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    description: "Lead development of enterprise applications using React, Node.js, and AWS. Implemented CI/CD pipelines and mentored junior developers."
-  },
-  {
-    year: "2020 - 2022",
-    title: "Full Stack Developer",
-    company: "Web Innovators",
-    description: "Developed and maintained multiple client websites and web applications using Next.js, Express, and MongoDB."
-  },
-  {
-    year: "2018 - 2020",
-    title: "Frontend Developer",
-    company: "Digital Creatives",
-    description: "Created responsive interfaces using React and optimized application performance for high-traffic websites."
-  },
-  {
-    year: "2016 - 2018",
-    title: "Bachelor's Degree in Computer Science",
-    company: "University of Technology",
-    description: "Graduated with honors, focusing on web development and software engineering principles."
-  }
-];
+import Image from 'next/image';
+import { experiences } from '@/data/experience';
+import { education } from '@/data/education';
+import { certifications } from '@/data/certifications';
+import { achievements } from '@/data/achievements';
 
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8">About Me</h1>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="md:col-span-1 flex justify-center">
-            <div className="w-48 h-48 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
-              <span className="text-blue-500">Your Photo</span>
+      <div className="max-w-5xl mx-auto space-y-16">
+        {/* About Me Section */}
+        <section id="about-me">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">About Me</h1>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-2/3 space-y-4">
+              <p className="text-lg">
+                I&apos;m a passionate Blockchain and Full Stack Developer with expertise in Solidity, Move, and web development. With a strong foundation in smart contract development and full stack technologies, I create secure, decentralized applications that solve real-world problems.
+              </p>
+              <p className="text-lg">
+                My focus areas include blockchain development on multiple chains including Ethereum, Aptos, and SUI. I&apos;m particularly interested in creating decentralized solutions that bridge the gap between complex blockchain technology and everyday users.
+              </p>
+              <div className="flex flex-wrap gap-3 mt-6">
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">Solidity</span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">Move</span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">React</span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">Next.js</span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">Node.js</span>
+              </div>
+            </div>
+            <div className="md:w-1/3 flex justify-center">
+              <div className="relative w-60 h-60 rounded-xl overflow-hidden border-4 border-blue-500/20">
+                <div className="relative h-64 w-full">
+                    <Image
+                        src="/mainPage/img1.jpg"
+                        alt="Description of image"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+              </div>
             </div>
           </div>
-          
-          <div className="md:col-span-2">
-            <h2 className="text-2xl font-semibold mb-4">Vatsal Tibrewal</h2>
-            <p className="text-lg mb-4">
-              I&apos;m a passionate Full Stack Developer with expertise in building modern web applications. With a strong foundation in both frontend and backend technologies, I create seamless, user-focused experiences that solve real-world problems.
-            </p>
-            <p className="text-lg mb-4">
-              My journey in tech started with a fascination for creating things that live on the internet. Since then, I&apos;ve worked on various projects ranging from small business websites to complex enterprise applications.
-            </p>
-            <p className="text-lg">
-              When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.
-            </p>
-            
-            <div className="flex gap-4 mt-8">
-              <a 
-                href="/path-to-your-resume.pdf" 
-                className="rounded-full bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity inline-flex items-center"
-                target="_blank"
-                rel="noopener noreferrer"
+        </section>
+
+        {/* Education Section */}
+        <section id="education" className="pt-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Education</h2>
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <div key={index} className="border border-black/5 dark:border-white/10 rounded-lg p-6 hover:bg-foreground/5 transition-colors">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold">{edu.degree}</h3>
+                    <p className="text-blue-500">{edu.institution}</p>
+                    <p className="text-foreground/70 mt-2">{edu.description}</p>
+                  </div>
+                  <div className="shrink-0">
+                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full">
+                      {edu.year}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience" className="pt-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Experience</h2>
+          <div className="space-y-6">
+            {experiences.map((exp, index) => (
+              <div 
+                key={index} 
+                className="relative border border-black/5 dark:border-white/10 rounded-lg p-6 hover:bg-foreground/5 transition-colors"
               >
-                <span>Download Resume</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </a>
-            </div>
+                <div className="flex flex-col md:flex-row gap-4">
+                  {/* Experience icon/badge */}
+                  <div className="hidden md:flex md:items-start md:justify-center md:w-16">
+                    <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Experience details */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold">{exp.title}</h3>
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="text-blue-500">{exp.company}</span>
+                      <span className="text-foreground/50">•</span>
+                      <span className="text-sm text-foreground/70">{exp.year}</span>
+                    </div>
+                    <p className="text-foreground/80">{exp.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
+        </section>
+
+        {/* Achievements Section */}
+        <section id="achievements" className="pt-8">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">Achievements</h2>
+        <div className="space-y-6">
+            {achievements.map((achievement) => (
+            <div 
+                key={achievement.id} 
+                className="border border-black/5 dark:border-white/10 rounded-lg p-6 hover:bg-foreground/5 transition-colors"
+            >
+                <div className="flex items-start">
+                <div className="hidden md:flex md:items-start md:justify-center md:w-16">
+                    <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                    </div>
+                </div>
+                <div className="flex-1">
+                    <h3 className="text-xl font-semibold">{achievement.title}</h3>
+                    <div className="flex items-center space-x-2 mb-3">
+                    <span className="text-sm text-foreground/70">{achievement.date}</span>
+                    </div>
+                    <ul className="list-disc pl-5 space-y-2 text-foreground/80">
+                    {achievement.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                    </ul>
+                </div>
+                </div>
+            </div>
+            ))}
         </div>
-        
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-center">Experience & Education</h2>
-          <Timeline items={experienceData} />
+        </section>
+
+        {/* Certifications Section */}
+        <section id="certifications" className="pt-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {certifications.map((cert, index) => (
+              <div 
+                key={index} 
+                className="border border-black/5 dark:border-white/10 rounded-lg p-6 hover:bg-foreground/5 transition-colors"
+              >
+                <h3 className="text-lg font-semibold mb-2">{cert.name}</h3>
+                <p className="text-foreground/70 mb-3">Issued by {cert.issuer}</p>
+                <a 
+                  href={cert.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-500 hover:underline text-sm inline-flex items-center"
+                >
+                  Verify Certificate
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>

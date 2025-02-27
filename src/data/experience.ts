@@ -1,27 +1,21 @@
 // src/data/experience.ts
 export const experiences = [
-  {
-    year: "2022 - Present",
-    title: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    description: "Lead development of enterprise applications using React, Node.js, and AWS. Implemented CI/CD pipelines and mentored junior developers."
-  },
-  {
-    year: "2020 - 2022",
-    title: "Full Stack Developer",
-    company: "Web Innovators",
-    description: "Developed and maintained multiple client websites and web applications using Next.js, Express, and MongoDB."
-  },
-  {
-    year: "2018 - 2020",
-    title: "Frontend Developer",
-    company: "Digital Creatives",
-    description: "Created responsive interfaces using React and optimized application performance for high-traffic websites."
-  },
-  {
-    year: "2016 - 2018",
-    title: "Bachelor's Degree in Computer Science",
-    company: "University of Technology",
-    description: "Graduated with honors, focusing on web development and software engineering principles."
-  }
+    {
+      year: "Jan 2025 - Present",
+      title: "FullStack Developer Intern",
+      company: "Hashcase",
+      description: "Developing a consumer-centric product on SUI Blockchain, implementing Move language smart contracts and building user interfaces."
+    },
+    {
+      year: "2024",
+      title: "Speaker & Developer",
+      company: "SuperMove Tour India",
+      description: "Conducted workshops, events and hackathons for developer onboarding on Aptos Blockchain in India through SuperMove Tour."
+    },
+    {
+        year: "Mar 2024 - May 2024",
+        title: "Solidity Developer Intern",
+        company: "Avex Defy",
+        description: "Worked on various Solidity Smart Contracts and Interfaces, streamlining development processes and reducing debugging time by 30%. Deployed 10+ smart contracts with a 100% success rate."
+    }
 ];

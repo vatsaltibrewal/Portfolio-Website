@@ -29,7 +29,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
               <a
-                href="https://drive.google.com/file/d/1mW4xBf49J_Yip1HtCMonN7DR_Wqywchl/view?usp=sharing"
+                href="https://drive.google.com/file/d/17zTCRjM6xRayPaP7tE96tAdr1OiGfVEu/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-blue-500 text-white px-6 py-3 font-medium hover:bg-blue-600 transition-colors flex items-center"

@@ -113,7 +113,7 @@ export default function PersistentNavBar() {
           <div className="h-6 mx-3 border-l border-black/5 dark:border-white/10 hidden sm:block"></div>
           
           <a
-            href="https://drive.google.com/file/d/1mW4xBf49J_Yip1HtCMonN7DR_Wqywchl/view?usp=sharing"
+            href="https://drive.google.com/file/d/17zTCRjM6xRayPaP7tE96tAdr1OiGfVEu/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex px-3 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors items-center text-sm font-medium"

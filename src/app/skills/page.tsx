@@ -1,5 +1,5 @@
 import {
-  SiCplusplus, SiPython, SiJavascript, SiTypescript, SiRust, SiSolidity, SiReact, SiNextdotjs,
+  SiCplusplus, SiPython, SiJavascript, SiTypescript, SiSolidity, SiReact, SiNextdotjs,
   SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPostgresql, SiDocker, SiKubernetes,
   SiVercel, SiOpenai, SiAmazon, SiGit, SiTailwindcss, SiBootstrap
 } from 'react-icons/si';

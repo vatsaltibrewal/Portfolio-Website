@@ -1,44 +1,37 @@
-// src/app/layout.tsx
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import PersistentNavBar from "@/components/layout/PersistentNavBar";
-import Footer from "@/components/layout/Footer";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { Providers } from './providers';
+import { LeftSidebar } from '@/components/LeftSidebar';
+import { RightNavbar } from '@/components/RightNavbar';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Vatsal Tibrewal",
-  description: "Portfolio of Vatsal Tibrewal, a Blockchain and Full Stack Developer specialized in Solidity, Move, and web development",
+  title: 'Vatsal Tibrewal | Portfolio',
+  description: "Vatsal Tibrewal's Portfolio",
   icons: {
-    icon: { url: '/logo.jpg', sizes: '32x32' }, // Reference to your new favicon
+    icon: { url: '/avatar.jpg' },
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
-        <ThemeProvider>
-          <main className="flex-grow pt-6 pb-12">
-            {children}
+      <body className={`${inter.className} bg-light-bg dark:bg-dark-bg`}>
+        <Providers>
+          <LeftSidebar />
+          <main className="pb-24 lg:pt-16 lg:pb-16 lg:ml-80 lg:mr-60">
+            <div className="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-2xl p-6 lg:p-12">
+              {children}
+            </div>
           </main>
-          <PersistentNavBar />
-          <Footer />
-        </ThemeProvider>
+          <RightNavbar />
+        </Providers>
       </body>
     </html>
   );

@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vatsal Tibrewal - Personal Portfolio
 
-## Getting Started
+This is the source code for my personal portfolio website, designed to showcase my skills, projects, and professional experience as a Full-Stack and Blockchain Developer. The site is built with a focus on a clean, modern aesthetic, full responsiveness, and easy content management.
 
-First, run the development server:
+**[Live Demo](https://vatsaltibrewal.com/)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Multi-Page Layout**: Separate, dedicated pages for About Me, Experience, Projects, and Skills.
+- **Light & Dark Mode**: Seamless theme switching with a user-friendly toggle.
+- **Fully Responsive Design**: A clean three-column layout on desktop that transforms into a mobile-friendly header and bottom navigation on smaller screens.
+- **Centralized Data Management**: All personal data (projects, experience, skills) is stored in a structured `/data` directory, making updates simple and quick without touching the UI code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is built using a modern and robust tech stack:
 
-## Learn More
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+- **Theme Management**: [next-themes](https://github.com/pacocoursey/next-themes)
+- **Deployment**: [Vercel](https://vercel.com/) (or GitHub Pages)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thank you for checking out my portfolio repository!

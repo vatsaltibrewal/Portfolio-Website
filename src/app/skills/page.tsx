@@ -1,7 +1,7 @@
 import {
   SiCplusplus, SiPython, SiJavascript, SiTypescript, SiSolidity, SiReact, SiNextdotjs,
   SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPostgresql, SiDocker, SiKubernetes,
-  SiVercel, SiOpenai, SiAmazon, SiGit, SiTailwindcss, SiBootstrap
+  SiVercel, SiOpenai, SiAmazon, SiGit, SiTailwindcss, SiBootstrap, SiSocketdotio, SiWebrtc
 } from 'react-icons/si';
 import { FaJava, FaBug, FaBrain } from "react-icons/fa";
 import { TbArrowsRightLeft, TbRepeat } from 'react-icons/tb';
@@ -36,6 +36,7 @@ const languages = [
 const frameworks = [
     { name: 'React.js', icon: <SiReact size={36} /> }, { name: 'Next.js', icon: <SiNextdotjs size={36} /> },
     { name: 'Node.js', icon: <SiNodedotjs size={36} /> }, { name: 'Express', icon: <SiExpress size={36} /> },
+    { name: 'Socket.io', icon: <SiSocketdotio size={36} /> }, { name: 'WebRTC', icon: <SiWebrtc size={36} /> },
     { name: 'Bootstrap', icon: <SiBootstrap size={36} /> }, { name: 'Tailwind', icon: <SiTailwindcss size={36} /> }
 ];
 const databases = [
@@ -61,7 +62,7 @@ export default function SkillsPage() {
     return (
         <div className="space-y-12">
             <SkillSection title="Languages">{languages.map(skill => <SkillCard key={skill.name} {...skill} />)}</SkillSection>
-            <SkillSection title="Frameworks & Libraries">{frameworks.map(skill => <SkillCard key={skill.name} {...skill} />)}</SkillSection>
+            <SkillSection title="Frameworks, Libraries & Protocols">{frameworks.map(skill => <SkillCard key={skill.name} {...skill} />)}</SkillSection>
             <SkillSection title="Databases">{databases.map(skill => <SkillCard key={skill.name} {...skill} />)}</SkillSection>
             <SkillSection title="Cloud & DevOps">{devops.map(skill => <SkillCard key={skill.name} {...skill} />)}</SkillSection>
             <SkillSection title="AI & ML">{ai_ml.map(skill => <SkillCard key={skill.name} {...skill} />)}</SkillSection>

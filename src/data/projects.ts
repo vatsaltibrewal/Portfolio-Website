@@ -14,7 +14,7 @@ export const projects: Project[] = [
     imageUrl: '/projects/doubtit-placeholder.png',
     status: 'Completed',
     githubUrl: 'https://github.com/vatsaltibrewal/Doubt-It',
-    liveUrl: 'https://doubt-it.vercel.app',
+    liveUrl: 'https://doubtit.vatsal.tech',
   },
   {
     title: 'Project Spark',
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     imageUrl: '/projects/spark-placeholder.png',
     status: 'Completed',
     githubUrl: 'https://github.com/vatsaltibrewal/walmart-sparkathon',
-    liveUrl: 'https://walmart-sparkathon-three.vercel.app',
+    liveUrl: 'https://spark.vatsal.tech/agent',
   },
   {
     title: 'P2P Video Conferencing',

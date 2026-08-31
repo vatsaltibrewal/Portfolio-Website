@@ -15,7 +15,7 @@ export const LeftSidebar = () => {
                 />
             </div>
             <h1 className="text-2xl font-bold mb-2">Vatsal Tibrewal</h1>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Full Stack | GenAI | Web3</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Full Stack | Backend | Cloud</p>
             <div className="flex justify-center gap-5 mb-6 text-xl">
                 <a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent" title="LinkedIn"><Linkedin /></a>
                 <a href={process.env.NEXT_PUBLIC_GITHUB_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent" title="GitHub"><Github /></a>

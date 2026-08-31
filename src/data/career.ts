@@ -15,13 +15,15 @@ export interface Achievement {
 
 export const experiences: Experience[] = [
   {
-    role: 'Solidity Developer Intern',
-    company: 'Avex Defy',
-    date: 'Mar 2024 – May 2024',
-    url: 'https://avex.id/defy',
+    role: 'Full Stack Trainee',
+    company: 'Mahindra Group',
+    date: 'Mar 2025 – Present',
+    url: 'https://www.mahindra.com',
     description: [
-      'Developed and deployed 10+ Solidity smart contracts, increasing efficiency by 20%.',
-      'Integrated blockchain solutions with web interfaces to elevate user experience.'
+        'Built end-to-end full-stack applications with the Mahindra AI Team using FastAPI, React, PostgreSQL, and GCP to digitize manual workflows, improve traceability, and reduce turnaround time across business operations.',
+        'Developed a secure AI-enabled budgeting platform for Mahindra Research Valley, Chennai to streamline vehicle and program budget planning using historical data, existing proposal workflows, and AI-assisted decision support.',
+        'Built a Testbed Scheduler to allocate testbeds for component and part testing, reducing scheduling conflicts, test spillage, resource under-utilization, and avoidable testing costs through structured planning.',
+        'Delivered role-based workflow interfaces, approval flows, analytics dashboards, and audit-ready backend services that enhanced security, digitalized approvals, and embedded AI support into existing enterprise processes.'
     ]
   },
   {
@@ -30,30 +32,22 @@ export const experiences: Experience[] = [
     date: 'Jan 2025 – Apr 2025',
     url: 'https://hashcase.co',
     description: [
-        'Engineered Full-stack applications integrating blockchain with modern web technologies.',
-        'Developed responsive UIs using React, HTML, CSS and robust back-ends with Node.js, SQL and RESTful APIs.'
+        'Built and deployed end-to-end full-stack applications using Next.js, Express.js, SQL, and REST APIs, supporting 1,000+ concurrent users across production workflows.',
+        'Delivered engagement and loyalty platforms for brand-led products, helping improve repeat participation and customer journeys for clients including Upliance AI and Mysten Labs.',
+        'Engineered secure and scalable full-stack features including authentication, authorization, input validation, admin workflows, API integrations, and responsive user interfaces, improving reliability, usability, and production readiness.',
+        'Provisioned and managed AWS infrastructure, configured application environments, deployed services, and handled release operations end-to-end'
     ]
-  },
+  }
 ];
 
 export const achievements: Achievement[] = [
-    {
-        title: 'Rajasthan Police Hackathon 1.0 Finalist',
-        issuer: 'Rajasthan Police',
-        date: 'Jan 2024',
-        description: [
-            'Ranked in the top 10% among over 1500 competing teams.',
-            'Recognized for innovative contributions to public safety technology.'
-        ]
-    },
-    {
-        title: 'Aptos Winter School S2 Participant',
-        issuer: 'Aptos India',
-        date: 'Aug 2024',
-        description: [
-            'Got Selected for Aptos Winter School S2 at BITS Goa.',
-            'Developed DoubtIt - a DevTool for Developers.',
-        ]
+  {
+      title: 'ETH Global New Delhi Winner (0G Labs Track)',
+      issuer: 'ETH Global',
+      date: 'Sep 2025',
+      description: [
+          'Built Nebula-SDK, an AI agent kit for the 0G Chain enabling on-chain agents to execute blockchain transactions, issue refunds, and perform policy-governed actions under admin controls, winning $2,500 at ETHGlobal New Delhi'
+      ]
     },
     {
         title: 'DoraHacks Hackathon Winner',
@@ -63,5 +57,5 @@ export const achievements: Achievement[] = [
             'Earned $1000+ in bounties across two separate categories.',
             'Developed an Event Management dApp and a cross-chain dApp named Telechain.'
         ]
-    },
+    }
 ];
